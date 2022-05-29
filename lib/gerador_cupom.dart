@@ -2,19 +2,14 @@
 import 'package:primerio_projeto_dart/Vendedor.dart';
 
 String geradorCupom(Vendedor vendedor, int valor, int untimoCupomId, DateTime validade){
+
   String? guardaData;
   String dataParaString = validade.toString();
   String ultimoCupom = untimoCupomId.toString();
   String valorCupom = valor.toString();
   String? hash;
 
-  for(int i=0;i<=9; i++){
-    if(i==0){
-      guardaData = dataParaString[i];
-    }else{
-      guardaData = (guardaData! + dataParaString[i])!;
-    }
-  }
+  guardaData = formataData(dataParaString);
   
   String juncaoParaGerarHash = vendedor.razaoSocial! + ultimoCupom + guardaData! + valorCupom;
 
@@ -50,4 +45,17 @@ String geradorCupom(Vendedor vendedor, int valor, int untimoCupomId, DateTime va
 
   return hash!;
 
+}
+
+
+String formataData(String dataParaString){
+  var guardaData;
+  for(int i=0;i<=9; i++){
+    if(i==0){
+      guardaData = dataParaString[i];
+    }else{
+      guardaData = (guardaData! + dataParaString[i])!;
+    }
+  }
+  return guardaData;
 }
