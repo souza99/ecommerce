@@ -11,7 +11,7 @@ void main(List<String> arguments) {
   int valor = 20;
   var validade = DateTime(2022, 11, 9);
 
-  vendedor.setRazaoSocial("joao_ltda");
+  vendedor.setRazaoSocial("vendedor_lojava_ltda");
 
     var resultado = cupom.geradorCupom(vendedor, valor, untimo_cupom_id, validade);
 
