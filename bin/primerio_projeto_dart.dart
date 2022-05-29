@@ -1,6 +1,6 @@
 import 'package:primerio_projeto_dart/Vendedor.dart';
 import 'package:primerio_projeto_dart/primerio_projeto_dart.dart' as primerio_projeto_dart;
-import 'package:primerio_projeto_dart/gerador_cupom.dart' as cupom;
+import 'package:primerio_projeto_dart/cupomService.dart' as cupom;
 
 void main(List<String> arguments) {
   print('Hello world: ${primerio_projeto_dart.calculate()}!');
